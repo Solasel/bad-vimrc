@@ -15,10 +15,13 @@ If you want to use this as your primary vim layout/colorscheme, make your
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-let real = "FILEPATH TO BAD-VIMRC"
+let bad_vimrc_path = "FILEPATH TO BAD-VIMRC"
 
-execute "set runtimepath^=" . real
-execute "source" . real . "vimrc"
+let &runtimepath = &runtimepath . "," . bad_vimrc_path
+let &packpath = &packpath . "," . bad_vimrc_path
+
+runtime! plugin/*.vim
+execute "source" . bad_vimrc_path . "vimrc"
 
 colorscheme your_favorite_colorscheme
 
