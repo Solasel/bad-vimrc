@@ -1,0 +1,118 @@
+This is Will's cheat sheet for vim.
+
+First of all, there are three basic modes. Normal, Visual, and Insert.
+
+	Normal: Allows you to enter commands into text using your cursor.
+		
+		You can enter command by pressing jj from insert, and <ESC> from visual.
+
+	Visual: Allows you to do the same commands as command mode, but with visual 
+		aids to help you select the right text.
+
+		You can get to visual by pressing v, V, or ^v from command mode.
+
+	Insert: Allows you to directly modify text.
+
+		You can get to insert by pressing i, a, I, or A from command mode.
+
+			-Some commands also automatically enter insert after execution,
+			such as (c)hange.
+
+=======================================================================
+=======================================================================
+==========================  NORMAL MODE  ==============================
+=======================================================================
+=======================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Note: Since Normal Mode is the most versatile,
+this will most likely be the longest section.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#########################
+# CURSOR MOVEMENT KEYS: #
+#########################
+
+-------------------------------
+Movement by single chars/lines:			  k
+-------------------------------			h j l
+
+---------------------------------
+Movement within the current line:
+---------------------------------
+
+0 , $					-move to the beginning/end of the current line
+^					-move to the first non-whitespace character
+t{char} , f{char}			-move right before/on the next instance of {char}
+: , ,					-move to the next instance of the char after 
+						invoking f or t
+gm					-move to the middle of your viewing window on
+						the current line
+{n}|					-moves to the nth column of the current line
+
+------------------
+Movement by words:
+------------------
+
+w , W					-move forward by one word/WORD
+b , B					-move back by one word/WORD
+e , E					-move to the end of the current word/WORD
+
+-------------------------------------------------------------
+Moving by sentence {".", "?", "!"} or paragraph {blank line}:
+-------------------------------------------------------------
+
+( , )					-move backward/forward by one sentence
+{ , }					-move backward/forward by one paragraph
+
+-----------------------------------------
+Moving within the current viewing window:
+-----------------------------------------
+
+H , M , L				-move to the top, middle, or bottom of the current window
+						-> putting {n} before H or L will move n lines
+						down from the top/up from the bottom of the screen
+
+
+---------------------
+File-wide navigation:
+---------------------
+
+{line #}gg , {line#}G , :{line #}	-move to the specified line #
+gg , G					-move to the start/end of the file
+/{string} , ?{string}			-find all instances of string going forward/backward
+* , #					-find all instances of the word under your cursor
+						going forward/backward
+n , N					-jump to the next/previous instance of string
+{n}%					-jump to the point n% of the way through the file
+
+#########################
+# WINDOW CHANGING KEYS: #
+#########################
+
+------------------------------------
+Changing the current viewing window:
+------------------------------------
+
+^F , ^B					-page up/down
+^U , ^D					-move up/down half a page
+^E , ^Y					-scroll up/down one line
+
+zt, zz, zb				-make the current line the top, middle, or bottom line
+						of the viewing window
+zh, zH					-scroll by one character/screen right
+zl, zL					-scroll by one character/screen left
+
+------------------------
+Split-Window Navigation:
+------------------------
+
+^Ws, :split				-splits the window in two
+^Wn, :new				-create a new empty window
+^Wo, :on				-closes other windows and maximizes the current one
+^Wj, ^Wk				-switch to the lower/upper window
+
+-----
+Tabs:
+-----
+
