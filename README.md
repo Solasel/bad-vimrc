@@ -17,21 +17,12 @@ If you want to use this as your primary vim layout/colorscheme, make your
 
 let real = "FILEPATH TO BAD-VIMRC"
 
+execute "set runtimepath^=" . real
 execute "source" . real . "vimrc"
-execute "source" . real . "colors/thaumaturge.vim"
+
+colorscheme your_favorite_colorscheme
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Of course, the last line just changes the colorscheme, feel
-	free to use your own colorscheme, thaumaturge isn't in any way
-	particularly compatible.
-
-If you don't want to use thaumaturge, this can be simplified to:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-source FILEPATH_TO_BAD-VIMRC/vimrc
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+This sources the vimrc file and gives you access to all the files in this package.
 
