@@ -4,13 +4,17 @@ Please refrain from using this if you value actually being productive.
 
 -Will
 
+NOTE:
 The colorscheme included with this vimrc is thaumaturge, found at the link below.
 
 <https://github.com/baines/vim-colorscheme-thaumaturge>
 
-HOW TO USE:
+I like it and highly recommend it, but feel free to use your own personal favorite.
 
-If you want to use this as your primary vim layout/colorscheme, make your
+
+HOW TO USE THIS PACKAGE:
+
+If you want to use this as your primary vim layout, make your
 	main vimrc contain the following:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
