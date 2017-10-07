@@ -4,6 +4,12 @@ Please refrain from using this if you value actually being productive.
 
 -Will
 
+The colorscheme included with this vimrc is thaumaturge, found at the link below.
+
+<https://github.com/baines/vim-colorscheme-thaumaturge>
+
+HOW TO USE:
+
 If you want to use this as your primary vim layout/colorscheme, make your
 	main vimrc contain the following:
 
@@ -27,4 +33,5 @@ If you don't want to use thaumaturge, this can be simplified to:
 source FILEPATH_TO_BAD-VIMRC/vimrc
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
