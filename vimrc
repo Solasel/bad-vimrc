@@ -4,6 +4,15 @@ set encoding=utf-8			" hooray for good formatting.
 filetype plugin indent on
 
 " Window Options
+set ambw=single				" for characters of undefined width, makes them single width.
+
+if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
+	set noautochdir				" 
+endif " exists("+autochdir")
+
+set noaw				" manage your writes people!
+set noawa				" ^
+let &cpo = &cpo . "I"			"cpo options:
 set clipboard=unnamed			" allow unnamed register to access comp clipboard.
 set laststatus=2			" sets the status bar to two lines so it is always visible.
 set number				" show line numbers,
@@ -32,6 +41,11 @@ endif " has("packpath")
 
 " Reloads plugins now that we have this directory on the rtp.
 runtime! plugin/*.vim
+
+" おはようございます。
+" NOTES:
+" ai
+" cpoptions
 
 " Arrow Key Changes
 " Command Mode:
