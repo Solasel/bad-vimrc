@@ -18,7 +18,7 @@ If you want to use this as your primary vim layout, make your
 	main vimrc contain the following:
 
 ~~~vim
-source LOCATION_OF_bad-vimrc/vimrc
+source LOCATION_OF_BAD_VIMRC/vimrc
 ~~~
 
 This sources the vimrc file and gives you access to all the files in this package.
@@ -32,8 +32,9 @@ i.e.
 .
 .
 .
-source LOCATION_OF_bad-vimrc/vimrc
+source LOCATION_OF_BAD_VIMRC/vimrc
 colorscheme your_preferred_colorscheme
 ~~~
 
+Now please uninstall this package and make your own vimrc.
 
