@@ -4,6 +4,7 @@ Please refrain from using this if you value actually being productive.
 
 -Will
 
+
 NOTE:
 The colorscheme included with this vimrc is thaumaturge, found at the link below.
 
@@ -36,5 +37,10 @@ source LOCATION_OF_BAD_VIMRC/vimrc
 colorscheme your_preferred_colorscheme
 ~~~
 
-Now please uninstall this package and make your own vimrc.
+Note on foreign languages:
+	I leave to default all settings that involve foreign languages,
+	so make sure that you set the settings you need for your
+	language input.
+
+Now please uninstall this package, it's pretty bad.
 
