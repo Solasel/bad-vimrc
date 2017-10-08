@@ -22,14 +22,16 @@ set backspace=indent,eol,start		" makes backspace work as expected.
 " Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
 
-" If this vim supports pp, add this directory there too.
+" If this vim supports pp, add this directory there too,
+" 	and reloads plugins.
 if has("packpath")
 
 	let &packpath = &packpath . "," . expand('<sfile>:p:h')
 
-	" Reloads plugins now that we're added to pp.
-	runtime! plugin/*.vim
 endif " has("packpath")
+
+" Reloads plugins now that we have this directory on the rtp.
+runtime! plugin/*.vim
 
 " Arrow Key Changes
 " Command Mode:
