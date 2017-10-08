@@ -1,6 +1,6 @@
 " Basic changes...
 set nocompatible			" no.
-set encoding=utf-8
+set encoding=utf-8			" hooray for good formatting.
 filetype plugin indent on
 
 " Window Options
@@ -19,12 +19,17 @@ set showmatch				" shows matching parentheses/brackets.
 set ai					" autoindent...
 set backspace=indent,eol,start		" makes backspace work as expected.
 
-" Adds this directory to the rtp and pp.
+" Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
-let &packpath = &packpath . "," . expand('<sfile>:p:h')
 
-" Reloads plugins now that we're added to pp.
-runtime! plugin/*.vim
+" If this vim supports pp, add this directory there too.
+if has("packpath")
+
+	let &packpath = &packpath . "," . expand('<sfile>:p:h')
+
+	" Reloads plugins now that we're added to pp.
+	runtime! plugin/*.vim
+endif " has("packpath")
 
 " Arrow Key Changes
 " Command Mode:
@@ -43,6 +48,9 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+noremap <Space> <NOP>
+noremap <Backspace> <NOP>
+noremap <Return> <NOP>
 
 " Insert Mode:
 
@@ -58,9 +66,6 @@ inoremap <C-l> <Right>
 " Keybind Changes
 inoremap jj <ESC>
 let mapleader = "\<Space>"
-noremap <Space> <NOP>
-noremap <Backspace> <NOP>
-noremap <Return> <NOP>
 
 "HARDMODE
 "noremap h <NOP>
