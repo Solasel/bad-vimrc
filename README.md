@@ -17,19 +17,23 @@ HOW TO USE THIS PACKAGE:
 If you want to use this as your primary vim layout, make your
 	main vimrc contain the following:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-let bad_vimrc_path = "FILEPATH TO BAD-VIMRC"
-
-let &runtimepath = &runtimepath . "," . bad_vimrc_path
-let &packpath = &packpath . "," . bad_vimrc_path
-
-runtime! plugin/*.vim
-execute "source" . bad_vimrc_path . "vimrc"
-
-colorscheme your_favorite_colorscheme
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~
+source LOCATION_OF_bad-vimrc/vimrc
+~
 
 This sources the vimrc file and gives you access to all the files in this package.
+
+You should redefine your preferred colorscheme afterwards, so that anything inside
+bad-vimrc doesn't clobber your colorscheme.
+
+i.e.
+
+~
+.
+.
+.
+source LOCATION_OF_bad-vimrc/vimrc
+colorscheme your_preferred_colorscheme
+~
+
 

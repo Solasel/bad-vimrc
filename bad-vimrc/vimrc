@@ -4,6 +4,11 @@ set rnu
 filetype plugin indent on
 set encoding=utf-8
 
+let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
+let &packpath = &packpath . "," . expand('<sfile>:p:h')
+
+runtime! plugin/*.vim
+
 " Arrow Key Changes
 " Command Mode:
 
