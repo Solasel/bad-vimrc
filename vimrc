@@ -24,7 +24,7 @@ if exists ("+breakindentopt")		" shift wrapped lines by one space. makes it a bi
 	set breakindentopt=shift:1	" 	you have wrapped text.
 endif " exists ("+breakindentopt")
 
-let &cpo = &cpo . "I"			"cpo options:
+set cpoptions=aABceFIs			" cpo options:
 set clipboard=unnamed			" allow unnamed register to access comp clipboard.
 set laststatus=2			" sets the status bar to two lines so it is always visible.
 set number				" show line numbers,
