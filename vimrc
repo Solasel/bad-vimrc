@@ -1,15 +1,19 @@
 " Basic changes...
 set nocompatible			" no.
 set encoding=utf-8			" hooray for good formatting.
+set nobk				" we already have enough vim turds.
+set nobomb				" disabled because I primarily code.
+set bsdir=last				" personal preference.
+set bl					" by default list all buffers.
+set bt=					" make most buffers normally formatted
 filetype plugin indent on
-
-" Window Options
-set ambw=single				" for characters of undefined width, makes them single width.
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
 	set noautochdir				" 
 endif " exists("+autochdir")
 
+" Window Options
+set ambw=single				" for characters of undefined width, makes them single width.
 set noaw				" manage your writes people!
 set noawa				" ^
 let &cpo = &cpo . "I"			"cpo options:
@@ -44,8 +48,8 @@ runtime! plugin/*.vim
 
 " おはようございます。
 " NOTES:
-" ai
 " cpoptions
+" bkc
 
 " Arrow Key Changes
 " Command Mode:
