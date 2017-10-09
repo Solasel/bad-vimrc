@@ -3,26 +3,26 @@ set nocompatible			" no.
 set encoding=utf-8			" hooray for good formatting.
 set nobackup				" we already have enough vim turds.
 set nobomb				" disabled because I primarily code.
-set browsedir=last				" personal preference.
-set buftype=					" make most buffers normally formatted
+set browsedir=last			" personal preference.
+set buftype=				" make most buffers normally formatted
 filetype plugin indent on
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
-	set noautochdir				" 
+	set noautochdir			" 
 endif " exists("+autochdir")
 
 " Window Options
-set ambiwidth=single				" for characters of undefined width, makes them single width.
+set ambiwidth=single			" for characters of undefined width, makes them single width.
 set noautowrite				" manage your writes people!
 set noautowriteall				" ^
 
-if exists ("+breakindent")
-	set breakindent				" line wrapping without indents is annoying.
-endif " exists ("+breakindent")
+if exists("+breakindent")
+	set breakindent			" line wrapping without indents is annoying.
+endif " exists("+breakindent")
 
-if exists ("+breakindentopt")		" shift wrapped lines by one space. makes it a bit easier to tell
+if exists("+breakindentopt")		" shift wrapped lines by one space. makes it a bit easier to tell
 	set breakindentopt=shift:1	" 	you have wrapped text.
-endif " exists ("+breakindentopt")
+endif " exists("+breakindentopt")
 
 set cpoptions=aABceFIs			" cpo options:
 set clipboard=unnamed			" allow unnamed register to access comp clipboard.
@@ -43,8 +43,7 @@ set backspace=indent,eol,start		" makes backspace work as expected.
 " Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
 
-" If this vim supports pp, add this directory there too,
-" 	and reloads plugins.
+" If this vim supports pp, add this directory there too.
 if exists("+packpath")
 	let &packpath = &packpath . "," . expand('<sfile>:p:h')
 endif " has("packpath")
@@ -76,7 +75,6 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 noremap <Space> <NOP>
 noremap <Backspace> <NOP>
-noremap <Return> <NOP>
 
 " Insert Mode:
 

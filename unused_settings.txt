@@ -40,6 +40,8 @@ antialias
 arabic
 arabicshape
 binary
+casemap
+cedit
 
 #################################################
 # Settings where I don't know the right answer: #
@@ -52,6 +54,7 @@ backupdir
 backupext
 backupskip
 breakat
+cdpath
 
 ##################################
 # Settings that idk wtf they do: #
@@ -63,3 +66,5 @@ balloonexpr
 belloff
 bioskey
 bufhidden
+charconvert
+
