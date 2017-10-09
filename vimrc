@@ -1,11 +1,10 @@
 " Basic changes...
 set nocompatible			" no.
 set encoding=utf-8			" hooray for good formatting.
-set nobk				" we already have enough vim turds.
+set nobackup				" we already have enough vim turds.
 set nobomb				" disabled because I primarily code.
-set bsdir=last				" personal preference.
-set bl					" by default list all buffers.
-set bt=					" make most buffers normally formatted
+set browsedir=last				" personal preference.
+set buftype=					" make most buffers normally formatted
 filetype plugin indent on
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
@@ -13,23 +12,32 @@ if exists("+autochdir")			" turns off automatic directory switching, if it is su
 endif " exists("+autochdir")
 
 " Window Options
-set ambw=single				" for characters of undefined width, makes them single width.
-set noaw				" manage your writes people!
-set noawa				" ^
+set ambiwidth=single				" for characters of undefined width, makes them single width.
+set noautowrite				" manage your writes people!
+set noautowriteall				" ^
+
+if exists ("+breakindent")
+	set breakindent				" line wrapping without indents is annoying.
+endif " exists ("+breakindent")
+
+if exists ("+breakindentopt")		" shift wrapped lines by one space. makes it a bit easier to tell
+	set breakindentopt=shift:1	" 	you have wrapped text.
+endif " exists ("+breakindentopt")
+
 let &cpo = &cpo . "I"			"cpo options:
 set clipboard=unnamed			" allow unnamed register to access comp clipboard.
 set laststatus=2			" sets the status bar to two lines so it is always visible.
 set number				" show line numbers,
-set rnu					" relative line numbers that is. Use <:set rnu!> to disable.
+set relativenumber			" relative line numbers that is. Use <:set rnu!> to disable.
 set showmode				" show the current mode.
-set vb					" silences the error bell.
+set visualbell					" silences the error bell.
 
 " Buffer View Options
 syntax on				" enables syntax hilighting.
 set showmatch				" shows matching parentheses/brackets.
 
 " Editing Options
-set ai					" autoindent...
+set autoindent				" autoindent...
 set backspace=indent,eol,start		" makes backspace work as expected.
 
 " Adds this directory to the rtp.
@@ -37,10 +45,8 @@ let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
 
 " If this vim supports pp, add this directory there too,
 " 	and reloads plugins.
-if has("packpath")
-
+if exists("+packpath")
 	let &packpath = &packpath . "," . expand('<sfile>:p:h')
-
 endif " has("packpath")
 
 " Reloads plugins now that we have this directory on the rtp.

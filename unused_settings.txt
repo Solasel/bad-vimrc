@@ -1,0 +1,65 @@
+Any settings that I explicitly set in the vimrc file satisfy one of the below:
+
+	-I don't like the default setting
+
+	-I think that they're important enough to manually define,
+		just in case some other vimrc would overwrite it
+
+I will not change settings that:
+
+	-I think the default is ideal and it would not be reasonably
+		overridden somewhere else
+	
+	-I don't yet know what the best version of the setting is
+	
+	-I don't know what the setting does :/
+
+Some examples of things that I leave unchanged:
+
+	-Things that pertain to languages that I don't know/use.
+		i.e. Farsi, Arabic
+
+	-Things that pertain to (programming) languages that I don't
+		know/use.
+
+	-Things that pertain to OS's that I don't use.
+		i.e. Mac
+
+For the settings that I do change, there is documentation in the vimrc,
+so here I will provide documentation for the settings that I don't change.
+
+
+###################################################
+# Settings that I leave to default intentionally: #
+###################################################
+
+aleph
+allowrevins
+altkeymap
+antialias
+arabic
+arabicshape
+binary
+
+#################################################
+# Settings where I don't know the right answer: #
+#################################################
+
+autoread
+backup
+backupcopy
+backupdir
+backupext
+backupskip
+breakat
+
+##################################
+# Settings that idk wtf they do: #
+##################################
+
+balloondelay
+ballooneval
+balloonexpr
+belloff
+bioskey
+bufhidden
