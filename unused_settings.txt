@@ -30,7 +30,7 @@ so here I will provide documentation for the settings that I don't change.
 
 
 ###################################################
-# Settings that I leave to default intentionally: #
+= Settings that I leave to default intentionally: =
 ###################################################
 
 aleph
@@ -44,7 +44,7 @@ casemap
 cedit
 
 #################################################
-# Settings where I don't know the right answer: #
+= Settings where I don't know the right answer: =
 #################################################
 
 autoread
@@ -57,7 +57,7 @@ breakat
 cdpath
 
 ##################################
-# Settings that idk wtf they do: #
+= Settings that idk wtf they do: =
 ##################################
 
 balloondelay

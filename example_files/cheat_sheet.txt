@@ -30,7 +30,7 @@ this will most likely be the longest section.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #########################
-# CURSOR MOVEMENT KEYS: #
+= CURSOR MOVEMENT KEYS: =
 #########################
 
 -------------------------------
@@ -87,7 +87,7 @@ n , N					-jump to the next/previous instance of string
 {n}%					-jump to the point n% of the way through the file
 
 #########################
-# WINDOW CHANGING KEYS: #
+= WINDOW CHANGING KEYS: =
 #########################
 
 ------------------------------------
