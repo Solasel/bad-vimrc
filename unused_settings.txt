@@ -42,6 +42,15 @@ arabicshape
 binary
 casemap
 cedit
+cmdheight
+cmdwinheight
+colorcolumn
+columns
+compatible			NO!
+comments
+completeopt
+confirm
+copyindent
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -55,6 +64,11 @@ backupext
 backupskip
 breakat
 cdpath
+cindent
+cinkeys
+cinoptions
+cinwords
+complete
 
 ##################################
 = Settings that idk wtf they do: =
@@ -67,4 +81,10 @@ belloff
 bioskey
 bufhidden
 charconvert
+clipboard
+commentstring
+completefunc
+concealcursor
+conceallevel
+conskey
 
