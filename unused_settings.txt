@@ -28,6 +28,10 @@ Some examples of things that I leave unchanged:
 For the settings that I do change, there is documentation in the vimrc,
 so here I will provide documentation for the settings that I don't change.
 
+A special case is cpoptions. There are a lot of them, and I mostly keep it
+	default, but there are options that vi-compatible people (nerds) would
+	use.
+
 
 ###################################################
 = Settings that I leave to default intentionally: =
@@ -44,13 +48,20 @@ casemap
 cedit
 cmdheight
 cmdwinheight
-colorcolumn
 columns
 compatible			NO!
 comments
 completeopt
 confirm
 copyindent
+cursorcolumn
+cursorline
+debug
+delcombine
+dictionary
+directory
+display
+eadirection
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -87,4 +98,16 @@ completefunc
 concealcursor
 conceallevel
 conskey
+cryptmethod
+cscopepathcomp
+cscopeprg
+cscopequickfix
+cscoperelative
+cscopetag
+cscopetagorder
+cscopeverbose
+define
+diff
+diffexpr
+diffopt
 

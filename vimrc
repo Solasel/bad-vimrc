@@ -1,4 +1,3 @@
-" Left-off: cpoptions.
 " Basic changes...
 set nocompatible			" no.
 set encoding=utf-8			" hooray for good formatting.
@@ -25,7 +24,7 @@ if exists("+breakindentopt")		" shift wrapped lines by one space. makes it a bit
 	set breakindentopt=shift:1	" 	you have wrapped text.
 endif " exists("+breakindentopt")
 
-set cpoptions+=I			" cpo options:
+set cpoptions+=IZ			" cpo options:
 set clipboard=unnamed			" allow unnamed register to access comp clipboard.
 set laststatus=2			" sets the status bar to two lines so it is always visible.
 set number				" show line numbers,
@@ -36,10 +35,13 @@ set visualbell					" silences the error bell.
 " Buffer View Options
 syntax on				" enables syntax hilighting.
 set showmatch				" shows matching parentheses/brackets.
+set colorcolumn=80			" highlights the 80th column, since C.k
+hi ColorColumn ctermbg=lightgrey
 
 " Editing Options
 set autoindent				" autoindent...
 set backspace=indent,eol,start		" makes backspace work as expected.
+set nodigraph
 
 " Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
@@ -84,13 +86,16 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 
 " Keybind Changes
 inoremap jj <ESC>
 let mapleader = "\<Space>"
+noremap <Leader>c :set cc=<CR>
+noremap <Leader>v :mkview! .%.v<CR>
+noremap <Leader>V :so .%.v<CR>
+noremap <Leader>w :w
+noremap <Leader>m @m
 
 "HARDMODE
 "noremap h <NOP>
@@ -106,10 +111,6 @@ set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(ex
 "------------------------------------------------------------------------------
 "Set UTF-8 as the default encoding for commit messages
 autocmd BufReadPre COMMIT_EDITMSG,git-rebase-todo setlocal fileencodings=utf-8
-
-
-" autocmd BufWrite *[^v] mkview! %.v
-" autocmd BufWinEnter *[^v] silent source %.v
 
 "Remember the positions in files with some git-specific exceptions"
 autocmd BufReadPost *
