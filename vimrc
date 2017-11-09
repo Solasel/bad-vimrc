@@ -35,8 +35,8 @@ set visualbell					" silences the error bell.
 " Buffer View Options
 syntax on				" enables syntax hilighting.
 set showmatch				" shows matching parentheses/brackets.
-set colorcolumn=80			" highlights the 80th column, since C.k
-hi ColorColumn ctermbg=lightgrey
+" set colorcolumn=80			" highlights the 80th column, since C.k
+" hi ColorColumn ctermbg=lightgrey
 
 " Editing Options
 set autoindent				" autoindent...
@@ -94,8 +94,8 @@ let mapleader = "\<Space>"
 noremap <Leader>c :set cc=<CR>
 noremap <Leader>v :mkview! .%.v<CR>
 noremap <Leader>V :so .%.v<CR>
-noremap <Leader>w :w
-noremap <Leader>m @m
+noremap <Leader>w :w<CR>
+noremap <Leader>m @m<CR>
 
 "HARDMODE
 "noremap h <NOP>
