@@ -48,7 +48,7 @@ set foldcolumn=1			" having information about folds is useful!
 set foldlevelstart=0			" start by opening folds.
 set formatoptions="tcq2lj"		" add paragraph indentation fixes, stop vim newlining at textwidth,
 					" 	and joining comments makes sense.
-set tabstop=8				" that being said, this is the best way.
+set tabstop=8				" my preferred tab width
 
 " Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
