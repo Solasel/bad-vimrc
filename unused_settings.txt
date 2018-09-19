@@ -44,6 +44,7 @@ antialias
 arabic
 arabicshape
 binary
+buftype
 casemap
 cedit
 cmdheight

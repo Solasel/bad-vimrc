@@ -3,7 +3,7 @@ set nocompatible			" no.
 set encoding=utf-8			" hooray for good encoding schemes.
 set nobackup				" we already have enough vim turds.
 set nobomb				" disabled because I primarily code.
-set browsedir=last			" personal preference.
+set browsedir=buffer			" personal preference.
 set buftype=				" make most buffers normally formatted
 set noesckeys				" makes esc more responsive when in ins mode 
 filetype plugin indent on		" help us make files look pretty.
