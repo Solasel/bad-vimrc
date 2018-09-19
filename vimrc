@@ -1,11 +1,12 @@
 " Basic changes...
 set nocompatible			" no.
-set encoding=utf-8			" hooray for good formatting.
+set encoding=utf-8			" hooray for good encoding schemes.
 set nobackup				" we already have enough vim turds.
 set nobomb				" disabled because I primarily code.
 set browsedir=last			" personal preference.
 set buftype=				" make most buffers normally formatted
-filetype plugin indent on
+set noesckeys				" makes esc more responsive when in ins mode 
+filetype plugin indent on		" help us make files look pretty.
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
 	set noautochdir			" 
@@ -43,6 +44,10 @@ set autoindent				" autoindent...
 set backspace=indent,eol,start		" makes backspace work as expected.
 set nodigraph
 set noexpandtab				" let people look at code their way.
+set foldcolumn=1			" having information about folds is useful!
+set foldlevelstart=0			" start by opening folds.
+set formatoptions="tcq2lj"		" add paragraph indentation fixes, stop vim newlining at textwidth,
+					" 	and joining comments makes sense.
 set tabstop=8				" that being said, this is the best way.
 
 " Adds this directory to the rtp.
@@ -62,6 +67,7 @@ autocmd BufNewFile,BufRead *.md set syntax=markdown
 " NOTES:
 " cpoptions
 " bkc
+" formatprg
 
 " Arrow Key Changes
 " Command Mode:
