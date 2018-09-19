@@ -30,18 +30,20 @@ set laststatus=2			" sets the status bar to two lines so it is always visible.
 set number				" show line numbers,
 set relativenumber			" relative line numbers that is. Use <:set rnu!> to disable.
 set showmode				" show the current mode.
-set visualbell					" silences the error bell.
+set visualbell				" silences the error bell.
 
 " Buffer View Options
 syntax on				" enables syntax hilighting.
 set showmatch				" shows matching parentheses/brackets.
-" set colorcolumn=80			" highlights the 80th column, since C.k
+" set colorcolumn=80			" highlights the 80th column, since C.
 " hi ColorColumn ctermbg=lightgrey
 
 " Editing Options
 set autoindent				" autoindent...
 set backspace=indent,eol,start		" makes backspace work as expected.
 set nodigraph
+set noexpandtab				" let people look at code their way.
+set tabstop=8				" that being said, this is the best way.
 
 " Adds this directory to the rtp.
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
@@ -54,7 +56,9 @@ endif " has("packpath")
 " Reloads plugins now that we have this directory on the rtp.
 runtime! plugin/*.vim
 
-" おはようございます。
+" I've had problems with .md files before.
+autocmd BufNewFile,BufRead *.md set syntax=markdown
+
 " NOTES:
 " cpoptions
 " bkc
@@ -62,17 +66,17 @@ runtime! plugin/*.vim
 " Arrow Key Changes
 " Command Mode:
 
-cnoremap <Up> <NOP>
+cnoremap <Up> <NOP>			" disable arrow keys because elitism.
 cnoremap <Down> <NOP>
 cnoremap <Left> <NOP>
 cnoremap <Right> <NOP>
-cnoremap <C-h> <Left>
+cnoremap <C-h> <Left>			" add ctrl movement so we can move around.
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
 "Normal/Visual Modes:
-noremap <Up> <NOP>
+noremap <Up> <NOP>			" again, elitism.
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
@@ -81,21 +85,21 @@ noremap <Backspace> <NOP>
 
 " Insert Mode:
 
-inoremap <Up> <NOP>
+inoremap <Up> <NOP>			" learn to use hjkl guys.
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-inoremap <C-h> <Left>
+inoremap <C-h> <Left>			" this sometimes helps.
 inoremap <C-l> <Right>
 
 " Keybind Changes
 inoremap jj <ESC>
 let mapleader = "\<Space>"
-noremap <Leader>c :set cc=<CR>
-noremap <Leader>v :mkview! .%.v<CR>
-noremap <Leader>V :so .%.v<CR>
-noremap <Leader>w :w<CR>
-noremap <Leader>m @m<CR>
+noremap <Leader>c :set cc=<CR>		" disable highlighting of the 80th column.
+noremap <Leader>v :mkview! .%.v<CR>	" make a view file with your current view.
+noremap <Leader>V :so .%.v<CR>		" load a saved view file.
+noremap <Leader>w :w<CR>		" write faster
+noremap <Leader>m @m<CR>		" faster macro execution.
 
 "HARDMODE
 "noremap h <NOP>
