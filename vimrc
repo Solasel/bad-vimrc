@@ -1,5 +1,7 @@
 " Basic changes...
 set nocompatible			" no.
+set nopaste				" enable this if you need to. you don't.
+set remap				" allow recursion for key mappings.
 set encoding=utf-8			" hooray for good encoding schemes.
 set nobackup				" we already have enough vim turds.
 set nobomb				" disabled because I primarily code.
@@ -10,6 +12,12 @@ filetype plugin indent on		" help us make files look pretty.
 set nohidden				" actually abandon things
 set hlsearch				" highlight search terms
 set ignorecase				" most of the time this helps. use \C to force case-matching.
+set mouse=				" this is vim.
+set nomousefocus			" no mouse
+set nrformats+=alpha			" allows inc/dec of alpha characters.
+set report=0				" always report number of changes.
+set ruler				" show the ruler.
+set selectmode=				" selectmode isn't cool.
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
 	set noautochdir			" 
@@ -36,6 +44,7 @@ set relativenumber			" relative line numbers that is. Use <:set rnu!> to disable
 set showmode				" show the current mode.
 set visualbell				" silences the error bell.
 set helplang="en"			" i speak English.
+set scrolloff=3				" always keep 3 lines around cursor.
 
 " Buffer View Options
 syntax on				" enables syntax hilighting.
@@ -56,9 +65,10 @@ set incsearch				" personal preference
 set noinsertmode			" babies.
 set nojoinspaces			" make join work as expected.
 set nolist				" default view of tabs and stuff.
-" Make <:list> look good.
-set listchars=eol:$,tab:>-,space:#,trail:#
+set listchars+=tab:>-,space:#,trail:#	" make <:list> look good
 set magic				" keep search patterns magic
+set matchpairs+=<:>			" add <> for matching
+set shiftwidth=8			" matches tab width
 set tabstop=8				" my preferred tab width
 
 " Adds this directory to the rtp.
@@ -78,6 +88,7 @@ autocmd BufNewFile,BufRead *.md set syntax=markdown
 " NOTES:
 " cpoptions
 " formatprg
+" rulerformat + statusline
 
 " Arrow Key Changes
 " Command Mode:
