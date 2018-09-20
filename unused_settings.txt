@@ -1,3 +1,5 @@
+undoreload
+
 Any settings that I explicitly set in the vimrc file satisfy one of the below:
 
 	-I don't like the default setting
@@ -166,6 +168,7 @@ shelltemp
 shiftround
 shortname
 showcmd
+showmode
 sidescroll
 smartcase
 smartindent
@@ -177,6 +180,29 @@ spellfile
 spelllang
 spellsuggest
 suffixes
+swapsync
+synmaxcol
+tagbsearch
+tagcase
+tagrelative
+term
+termbidi
+termencoding
+terse
+textauto
+textmode
+timeout
+ttimeout
+timeoutlen
+ttimeoutlen
+titlelen
+titleold
+ttyfast
+ttymouse
+ttytype
+undodir
+undofile
+undolevels
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -217,7 +243,13 @@ operatorfunc
 patchexpr
 patchmode
 showfulltag
-showmode
+switchbuf
+tabline
+tabpagemax
+tags
+tagstack
+textwidth
+thesaurus
 
 ##################################
 = Settings that idk wtf they do: =
@@ -286,4 +318,9 @@ shelltype
 shellxescape
 shellxquote
 suffixesadd
+tcldll
+toolbar
+toolbariconsize
+ttybuiltin
+ttyscroll
 

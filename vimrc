@@ -21,6 +21,8 @@ set selectmode=				" select mode isn't cool
 set shortmess=a				" abbreviate messages without losing information
 set startofline				" for large movements, move the cursor to the start of line
 set swapfile				" ensure we have a swapfile for recovery from crashes
+set title				" we like information
+set titlestring=%<%F\ %r%m		" show filename and modified in title
 
 " Status bar. Format:
 " <filepath><readonly?><modified?> <filetype> <last modified> ||| <fileformat> <ruler> 
@@ -73,6 +75,7 @@ set matchpairs+=<:>			" add <> for matching
 set shiftwidth=8			" matches tab width
 set tabstop=8				" my preferred tab width
 set showbreak=+++\  			" add +++ to the start of wrapped lines
+set tildeop					" tilde op is nice
 
 noh					" remove highlighting, mostly for hlsearch
 
