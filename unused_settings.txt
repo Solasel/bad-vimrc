@@ -44,13 +44,11 @@ antialias
 arabic
 arabicshape
 binary
-buftype
 casemap
 cedit
 cmdheight
 cmdwinheight
 columns
-compatible			NO!
 comments
 completeopt
 confirm
@@ -94,6 +92,31 @@ formatprg
 formatexpr
 fsync
 gdefault
+guicursor
+guifont
+guifontset
+guifontwide
+guiheadroom
+guioptions
+guipty
+guitablabel
+guitabtooltip
+helpfile
+helpheight
+history
+hkmap
+hkmapp
+include
+includeexpr
+infercase
+isfname
+isident
+iskeyword
+isprint
+key
+keymap
+luadll
+macatsui
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -114,6 +137,21 @@ cinwords
 complete
 exrc
 foldclose
+indentexpr
+indentkeys
+keymodel
+keywordprg
+langmap
+langmenu
+langnoremap
+laststatus
+lazyredraw
+linebreak
+lines
+linespace
+lisp
+lispwords
+loadplugins
 
 ##################################
 = Settings that idk wtf they do: =
@@ -145,4 +183,15 @@ diff
 diffexpr
 diffopt
 equalprg
+grepformat
+grepprg
+icon
+iconstring
+imactivatefunc
+imactivatekey
+imcmdline
+imdisable
+iminsert
+imsearch
+imstatusfunc
 

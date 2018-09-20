@@ -7,6 +7,9 @@ set browsedir=buffer			" personal preference.
 set buftype=				" make most buffers normally formatted
 set noesckeys				" makes esc more responsive when in ins mode 
 filetype plugin indent on		" help us make files look pretty.
+set nohidden				" actually abandon things
+set hlsearch				" highlight search terms
+set ignorecase				" most of the time this helps. use \C to force case-matching.
 
 if exists("+autochdir")			" turns off automatic directory switching, if it is supported.
 	set noautochdir			" 
@@ -32,6 +35,7 @@ set number				" show line numbers,
 set relativenumber			" relative line numbers that is. Use <:set rnu!> to disable.
 set showmode				" show the current mode.
 set visualbell				" silences the error bell.
+set helplang="en"			" i speak English.
 
 " Buffer View Options
 syntax on				" enables syntax hilighting.
@@ -48,6 +52,13 @@ set foldcolumn=1			" having information about folds is useful!
 set foldlevelstart=0			" start by opening folds.
 set formatoptions="tcq2lj"		" add paragraph indentation fixes, stop vim newlining at textwidth,
 					" 	and joining comments makes sense.
+set incsearch				" personal preference
+set noinsertmode			" babies.
+set nojoinspaces			" make join work as expected.
+set nolist				" default view of tabs and stuff.
+" Make <:list> look good.
+set listchars=eol:$,tab:>-,space:#,trail:#
+set magic				" keep search patterns magic
 set tabstop=8				" my preferred tab width
 
 " Adds this directory to the rtp.
@@ -66,7 +77,6 @@ autocmd BufNewFile,BufRead *.md set syntax=markdown
 
 " NOTES:
 " cpoptions
-" bkc
 " formatprg
 
 " Arrow Key Changes
@@ -106,6 +116,7 @@ noremap <Leader>v :mkview! .%.v<CR>	" make a view file with your current view.
 noremap <Leader>V :so .%.v<CR>		" load a saved view file.
 noremap <Leader>w :w<CR>		" write faster
 noremap <Leader>m @m<CR>		" faster macro execution.
+noremap <Leader>h :noh<CR>		" turn off highlighting
 
 "HARDMODE
 "noremap h <NOP>
