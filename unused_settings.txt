@@ -164,6 +164,19 @@ shellredir
 shellslash
 shelltemp
 shiftround
+shortname
+showcmd
+sidescroll
+smartcase
+smartindent
+smarttab
+softtabstop
+spell
+spellcapcheck
+spellfile
+spelllang
+spellsuggest
+suffixes
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -203,6 +216,8 @@ omnifunc
 operatorfunc
 patchexpr
 patchmode
+showfulltag
+showmode
 
 ##################################
 = Settings that idk wtf they do: =
@@ -270,4 +285,5 @@ sessionoptions
 shelltype
 shellxescape
 shellxquote
+suffixesadd
 
