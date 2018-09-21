@@ -37,10 +37,5 @@ source LOCATION_OF_BAD_VIMRC/vimrc
 colorscheme your_preferred_colorscheme
 ~~~
 
-Note on foreign languages:
-	I leave to default all settings that involve foreign languages,
-	so make sure that you set the settings you need for your
-	language input.
-
 Now please uninstall this package, it's pretty bad.
 
