@@ -1,5 +1,3 @@
-undoreload
-
 Any settings that I explicitly set in the vimrc file satisfy one of the below:
 
 	-I don't like the default setting
@@ -42,6 +40,7 @@ A special case is cpoptions. There are a lot of them, and I mostly keep it
 aleph
 allowrevins
 altkeymap
+ambiwidth
 antialias
 arabic
 arabicshape
@@ -60,6 +59,7 @@ cursorline
 debug
 delcombine
 dictionary
+digraph
 directory
 display
 eadirection
@@ -89,9 +89,9 @@ foldminlines
 foldnestmax
 foldopen
 foldtext
+formatexpr
 formatlistpat
 formatprg
-formatexpr
 fsync
 gdefault
 guicursor
@@ -179,6 +179,7 @@ spellcapcheck
 spellfile
 spelllang
 spellsuggest
+splitright
 suffixes
 swapsync
 synmaxcol
@@ -192,17 +193,40 @@ terse
 textauto
 textmode
 timeout
-ttimeout
 timeoutlen
-ttimeoutlen
 titlelen
 titleold
+ttimeout
+ttimeoutlen
 ttyfast
 ttymouse
 ttytype
-undodir
-undofile
-undolevels
+updatecount
+updatetime
+verbosefile
+viewoptions
+viminfo
+warn
+wildchar
+wildcharm
+wildignore
+wildignorecase
+wildmode
+wildoptions
+winaltkeys
+window
+winfixheight
+winfixwidth
+winheight
+winminheight
+winminwidth
+winwidth
+wrapmargin
+wrapscan
+write
+writeany
+writebackup
+writedelay
 
 #################################################
 = Settings where I don't know the right answer: =
@@ -250,6 +274,11 @@ tags
 tagstack
 textwidth
 thesaurus
+undodir
+undofile
+undolevels
+undoreload
+viewdir
 
 ##################################
 = Settings that idk wtf they do: =
@@ -299,10 +328,10 @@ modelines
 mzquantum
 opendevice
 osfiletype
+pdev
 perldll
 previewheight
 previewwindow
-pdev
 printencoding
 printexpr
 printfont
@@ -323,4 +352,5 @@ toolbar
 toolbariconsize
 ttybuiltin
 ttyscroll
+weirdinvert
 
