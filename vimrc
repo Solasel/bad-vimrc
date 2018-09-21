@@ -33,10 +33,11 @@ filetype plugin indent on		" try to recognize syntax and do related things
 " ##### Window Options #####
 " ##########################
 
+set cursorline				" used to find the line the cursor is on
 set foldcolumn=1			" having information about folds is useful!
 set laststatus=2			" sets the status bar to two lines so it is always visible
 set number				" show line numbers,
-set relativenumber			" relative line numbers that is. Use <:set rnu!> to toggle
+set norelativenumber			" and regular ones at that
 set noruler				" statusline is our ruler
 set scrolloff=3				" always keep 3 lines around cursor
 set showmode				" show the current mode
@@ -103,6 +104,11 @@ autocmd BufNewFile,BufRead *.md set syntax=markdown
 " Jump to the previous location in the file
 autocmd BufReadPost * exe "normal g`\""
 
+" Make the line number that the cursor is on be colored red
+autocmd ColorScheme * hi clear CursorLine
+autocmd ColorScheme * hi CursorLineNr ctermfg=red
+	
+
 " #######################
 " ##### Keybindings #####
 " #######################
@@ -132,6 +138,9 @@ inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 inoremap <C-h> <Left>			" this sometimes helps
 inoremap <C-l> <Right>
+inoremap ( ()<ESC>i			" automatically close group symbols
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
 
 " Misc. Keybindings
 inoremap jj <ESC>
