@@ -23,6 +23,7 @@ set mouse=				" this is vim -
 set nomousefocus			" no mouse
 set shortmess=a				" abbreviate messages without losing information
 set swapfile				" ensure we have a swapfile for recovery from crashes
+set t_Co=256				" enable 256-color mode
 set verbose=0				" don't spam screen with useless info
 set visualbell				" silences the error bell
 set wildmenu				" a neat menu for autocompletion
@@ -106,7 +107,7 @@ autocmd BufReadPost * exe "normal g`\""
 
 " Make the line number that the cursor is on be colored red
 autocmd ColorScheme * hi clear CursorLine
-autocmd ColorScheme * hi CursorLineNr ctermfg=red
+autocmd ColorScheme * hi CursorLineNr ctermfg=197
 	
 
 " #######################
@@ -114,17 +115,17 @@ autocmd ColorScheme * hi CursorLineNr ctermfg=red
 " #######################
 
 " Command Mode:
-cnoremap <Up> <NOP>			" disable arrow keys because elitism
+cnoremap <Up> <NOP>
 cnoremap <Down> <NOP>
 cnoremap <Left> <NOP>
 cnoremap <Right> <NOP>
-cnoremap <C-h> <Left>			" add ctrl movement so we can move around
+cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
 
 "Normal/Visual Modes:
-noremap <Up> <NOP>			" again, elitism
+noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
@@ -132,24 +133,24 @@ noremap <Space> <NOP>
 noremap <Backspace> <NOP>
 
 " Insert Mode:
-inoremap <Up> <NOP>			" learn to use hjkl guys
+inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-inoremap <C-h> <Left>			" this sometimes helps
+inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-inoremap ( ()<ESC>i			" automatically close group symbols
+inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 
 " Misc. Keybindings
 inoremap jj <ESC>
 let mapleader = "\<Space>"
-noremap <Leader>v :mkview! .%.v<CR>	" make a view file with your current view
-noremap <Leader>V :so .%.v<CR>		" load a saved view file
-noremap <Leader>w :w<CR>		" write faster
-noremap <Leader>m @m<CR>		" faster macro execution
-noremap <Leader>h :noh<CR>		" turn off highlighting
+noremap <Leader>v :mkview! .%.v<CR>
+noremap <Leader>V :so .%.v<CR>	
+noremap <Leader>w :w<CR>
+noremap <Leader>m @m<CR>
+noremap <Leader>h :noh<CR>
 
 " Hard Mode! Use if you want to become more familiar with harder vim movements
 "noremap h <NOP>
