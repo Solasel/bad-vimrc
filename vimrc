@@ -4,6 +4,8 @@ set nocompatible			" just no
 " ##### Basic Changes #####
 " #########################
 
+filetype plugin indent on		" try to recognize syntax and do related things
+syntax on				" enables syntax hilighting
 set noautochdir				" turns off automatic directory switching
 set noautowrite				" manage your writes people!
 set noautowriteall			" ^
@@ -18,7 +20,6 @@ set helplang="en"			" I speak english
 set nohidden				" actually abandon things
 set noinsertmode			" babies
 set magic				" keep search patterns magic
-set matchpairs+=<:>			" add <> for matching
 set mouse=				" this is vim -
 set nomousefocus			" no mouse
 set shortmess=a				" abbreviate messages without losing information
@@ -28,7 +29,6 @@ set verbose=0				" don't spam screen with useless info
 set visualbell				" silences the error bell
 set wildmenu				" a neat menu for autocompletion
 set writebackup				" ensures we don't lose files randomly
-filetype plugin indent on		" try to recognize syntax and do related things
 
 " ##########################
 " ##### Window Options #####
@@ -61,7 +61,6 @@ set showbreak=+++\  			" add +++ to the start of wrapped lines
 set showmatch				" shows matching parentheses/brackets
 set tabstop=8				" my preferred tab width, feel free to change, but NO SPACES
 set wrap				" wrapping > scrolling, for now at least
-syntax on				" enables syntax hilighting
 
 " ###########################
 " ##### Editing Options #####
@@ -114,37 +113,46 @@ autocmd ColorScheme * hi CursorLineNr ctermfg=197
 " ##### Keybindings #####
 " #######################
 
-" Command Mode:
+" disable standard movement in all modes
+" Command
 cnoremap <Up> <NOP>
 cnoremap <Down> <NOP>
 cnoremap <Left> <NOP>
 cnoremap <Right> <NOP>
-cnoremap <C-h> <Left>
-cnoremap <C-j> <Down>
-cnoremap <C-k> <Up>
-cnoremap <C-l> <Right>
-
-"Normal/Visual Modes:
+" Normal
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 noremap <Space> <NOP>
 noremap <Backspace> <NOP>
-
-" Insert Mode:
+noremap <CR> <NOP>
+" Insert
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+
+" enable ctrl+hjkl for movement when it is helpful
+" Command
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
+" Insert
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+
+" Insert Mode:
+" auto-match standard delimiters
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
 
 " Misc. Keybindings
+" this is cool
 inoremap jj <ESC>
+" various shortcuts for commonly used commands
 let mapleader = "\<Space>"
 noremap <Leader>v :mkview! .%.v<CR>
 noremap <Leader>V :so .%.v<CR>	

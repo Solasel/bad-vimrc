@@ -121,6 +121,7 @@ luadll
 macatsui
 makeef
 makeprg
+matchpairs
 matchtime
 maxcomine
 maxfuncdepth
