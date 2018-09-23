@@ -104,10 +104,9 @@ autocmd BufNewFile,BufRead *.md set syntax=markdown
 " Jump to the previous location in the file
 autocmd BufReadPost * exe "normal g`\""
 
-" Make the line number that the cursor is on be colored red
+" Highlight line number
 autocmd ColorScheme * hi clear CursorLine
 autocmd ColorScheme * hi CursorLineNr ctermfg=197
-	
 
 " #######################
 " ##### Keybindings #####
