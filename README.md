@@ -12,6 +12,8 @@ The colorscheme included with this vimrc is thaumaturge, found at the link below
 
 I like it and highly recommend it, but feel free to use your own personal favorite.
 
+(I actually personally prefer torte, but I might as well keep this in here)
+
 
 HOW TO USE THIS PACKAGE:
 
