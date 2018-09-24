@@ -165,13 +165,9 @@ noremap <Leader>h :noh<CR>
 "noremap k <NOP>
 "noremap l <NOP>
 
-" Adds this directory to the rtp
+" Adds this directory to the rtp and pp
 let &runtimepath = &runtimepath . "," . expand('<sfile>:p:h')
-
-" If this vim supports pp, add this directory there too
-if exists("+packpath")
-	let &packpath = &packpath . "," . expand('<sfile>:p:h')
-endif " has("packpath")
+let &packpath = &packpath . "," . expand('<sfile>:p:h')
 
 " Reloads plugins now that we have this directory on the rtp
 runtime! plugin/*.vim
