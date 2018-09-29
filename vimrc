@@ -98,8 +98,10 @@ set startofline				" for large movements, move the cursor to the start of line
 set statusline=%<%F%r%m\ %y\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})\ 
 	\%=[%{&ff}]\ %l-%c\ %P
 
-" I've had problems with .md files before
+" Set syntax for files that aren't normally recognized
 autocmd BufNewFile,BufRead *.md set syntax=markdown
+autocmd BufNewFile,BufRead *.cup set syntax=java
+autocmd BufNewFile,BufRead *.jflex set syntax=java
 
 " Jump to the previous location in the file
 autocmd BufReadPost * exe "normal g`\""
@@ -143,9 +145,7 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 " Insert Mode:
-" auto-match standard delimiters
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
+" auto-match braces
 inoremap { {}<ESC>i
 
 " Misc. Keybindings
@@ -155,7 +155,6 @@ inoremap jj <ESC>
 let mapleader = "\<Space>"
 noremap <Leader>v :mkview! .%.v<CR>
 noremap <Leader>V :so .%.v<CR>	
-noremap <Leader>w :w<CR>
 noremap <Leader>m @m<CR>
 noremap <Leader>h :noh<CR>
 
