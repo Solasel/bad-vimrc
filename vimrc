@@ -173,4 +173,3 @@ runtime! plugin/*.vim
 
 " Modeline. See <:help modeline>
 " vim:ts=8:ft=vim:norl
-
