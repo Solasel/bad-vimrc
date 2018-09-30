@@ -4,6 +4,7 @@ set nocompatible			" just no
 " ##### Basic Changes #####
 " #########################
 
+filetype plugin indent off		" disable filetype-specific settings
 syntax on				" enables syntax hilighting
 set noautochdir				" turns off automatic directory switching
 set noautowrite				" manage your writes people!
