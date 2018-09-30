@@ -92,17 +92,15 @@ set startofline				" for large movements, move the cursor to the start of line
 " ##### Misc. Settings #####
 " ##########################
 
-" Status bar. Format:
+" Statusline. Format:
 " <filepath><readonly?><modified?> <filetype> <last modified> ||| <fileformat> <ruler> 
-set statusline=%<%F%r%m\ %y\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})\ 
+set statusline=%<%F%r%m\ %y\ (%{strftime(\"%H:%M\ %m/%d/%Y\",getftime(expand(\"%:p\")))})\ 
 	\%=[%{&ff}]\ %l-%c\ %P
 
-" Set syntax for files that aren't normally recognized
+" Set syntax for filetypes that aren't normally recognized
 autocmd BufNewFile,BufRead *.md set syntax=markdown
-autocmd BufNewFile,BufRead *.cup set syntax=java
-autocmd BufNewFile,BufRead *.jflex set syntax=java
 
-" Jump to the previous location in the file
+" Remember the last location in a file
 autocmd BufReadPost * exe "normal g`\""
 
 " Highlight line number
@@ -152,10 +150,10 @@ inoremap { {}<ESC>i
 inoremap jj <ESC>
 " various shortcuts for commonly used commands
 let mapleader = "\<Space>"
-noremap <Leader>v :mkview! .%.v<CR>
-noremap <Leader>V :so .%.v<CR>	
-noremap <Leader>m @m<CR>
-noremap <Leader>h :noh<CR>
+noremap <Leader>v <ESC>:mkview! .%.v<CR>
+noremap <Leader>V <ESC>:so .%.v<CR>	
+noremap <Leader>m <ESC>@m<CR>
+noremap <Leader>h <ESC>:noh<CR>
 
 " Hard Mode! Use if you want to become more familiar with harder vim movements
 "noremap h <NOP>
