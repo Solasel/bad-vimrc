@@ -4,7 +4,6 @@ set nocompatible			" just no
 " ##### Basic Changes #####
 " #########################
 
-filetype plugin on	               	" try to recognize syntax and do related things
 syntax on				" enables syntax hilighting
 set noautochdir				" turns off automatic directory switching
 set noautowrite				" manage your writes people!
@@ -170,9 +169,6 @@ let &packpath = &packpath . "," . expand('<sfile>:p:h')
 
 " Reloads plugins now that we have this directory on the rtp
 runtime! plugin/*.vim
-
-set expandtab
-set tabstop=2
 
 " Modeline. See <:help modeline>
 " vim:ts=8:ft=vim:norl
