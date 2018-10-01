@@ -25,6 +25,7 @@ set nomousefocus			" no mouse
 set shortmess=a				" abbreviate messages without losing information
 set swapfile				" ensure we have a swapfile for recovery from crashes
 set t_Co=256				" enable 256-color mode
+set undofile				" save undo history in a file
 set verbose=0				" don't spam screen with useless info
 set visualbell				" silences the error bell
 set wildmenu				" a neat menu for autocompletion
@@ -43,9 +44,9 @@ set noruler				" statusline is our ruler
 set scrolloff=3				" always keep 3 lines around cursor
 set showmode				" show the current mode
 set sidescrolloff=3			" keep three 3 columns around the cursor
+set splitbelow				" make horizontal splits spawn below
 set title				" we like information
 set titlestring=%<%F\ %r%m		" show filename and modified in title
-set splitbelow				" make horizontal splits spawn below
 
 " ###############################
 " ##### Buffer View Options #####
@@ -68,6 +69,7 @@ set wrap				" wrapping > scrolling, for now at least
 
 set autoindent				" auto indenting is nice
 set backspace=indent,eol,start		" makes backspace work as expected
+set cindent				" help us adhere to C-indenting
 set noexpandtab				" let people look at code their way
 set nopaste				" trust me, you don't need this
 set nrformats+=alpha			" allows inc/dec of alpha characters
