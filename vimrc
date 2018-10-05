@@ -25,7 +25,7 @@ set nomousefocus			" no mouse
 set shortmess=a				" abbreviate messages without losing information
 set swapfile				" ensure we have a swapfile for recovery from crashes
 set t_Co=256				" enable 256-color mode
-set undofile				" save undo history in a file
+set noundofile				" vim isn't version control
 set verbose=0				" don't spam screen with useless info
 set visualbell				" silences the error bell
 set wildmenu				" a neat menu for autocompletion
