@@ -196,7 +196,6 @@ textmode
 timeout
 timeoutlen
 titlelen
-titleold
 ttimeout
 ttimeoutlen
 ttyfast
