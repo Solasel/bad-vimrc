@@ -46,6 +46,7 @@ set showmode				" show the current mode
 set sidescrolloff=3			" keep three 3 columns around the cursor
 set splitbelow				" make horizontal splits spawn below
 set title				" we like information
+set titleold=couldn't\ restore\ title\ :(	" an actually useful titleold
 set titlestring=%<%F\ %r%m		" show filename and modified in title
 
 " ###############################
