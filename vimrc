@@ -25,7 +25,7 @@ set nomousefocus			" no mouse
 set shortmess=a				" abbreviate messages without losing information
 set swapfile				" ensure we have a swapfile for recovery from crashes
 set t_Co=256				" enable 256-color mode
-set undofile				" save undo history in a file
+set noundofile				" vim is not version control!
 set verbose=0				" don't spam screen with useless info
 set visualbell				" silences the error bell
 set wildmenu				" a neat menu for autocompletion
@@ -114,25 +114,8 @@ autocmd ColorScheme * hi CursorLineNr ctermfg=197
 " ##### Keybindings #####
 " #######################
 
-" disable standard movement in all modes
-" Command
-cnoremap <Up> <NOP>
-cnoremap <Down> <NOP>
-cnoremap <Left> <NOP>
-cnoremap <Right> <NOP>
-" Normal
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" disable space so it doesn't interfere with our mapleader
 noremap <Space> <NOP>
-noremap <Backspace> <NOP>
-noremap <CR> <NOP>
-" Insert
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 
 " enable ctrl+hjkl for movement when it is helpful
 " Command
