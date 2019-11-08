@@ -109,7 +109,7 @@ autocmd BufReadPost * exe "normal g`\""
 
 " Highlight line number
 autocmd ColorScheme * hi clear CursorLine
-autocmd ColorScheme * hi CursorLineNr ctermfg=197
+autocmd ColorScheme * hi CursorLineNr cterm=bold ctermfg=197
 
 " #######################
 " ##### Keybindings #####
@@ -154,6 +154,10 @@ let &packpath = &packpath . "," . expand('<sfile>:p:h')
 
 " Reloads plugins now that we have this directory on the rtp
 runtime! plugin/*.vim
+
+" set nocindent
+" set expandtab
+" set tabstop=4
 
 " Modeline. See <:help modeline>
 " vim:ts=8:ft=vim:norl
